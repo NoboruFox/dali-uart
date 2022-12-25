@@ -1,0 +1,8 @@
+linker doe not generate the stm32f1.ld script. 
+/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: cannot open linker script file stm32f1.ld: No such file or directory
+without this file it says:
+/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+and firmware builds wrong. Also size of fw is too big.
+
+Have no idea why. I put jand-written file 
+based on stm32l0.ld from rhf project. The info for generating locates in libopencm3/ld/device_info file
